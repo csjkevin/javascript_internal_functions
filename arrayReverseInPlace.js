@@ -1,4 +1,4 @@
-Array.prototype.inPlaceReverse = function() {
+Array.prototype.reverseInPlace = function() {
 	let l = this.length;
 	for (let i = 0; i < l / 2; i++) {
 		let tmp = this[i];
