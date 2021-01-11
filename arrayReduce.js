@@ -1,9 +1,8 @@
 Array.prototype.myReduce = function(callback, initialValue) {
-	let arr = Array.prototype.slice.call(this);
-	let res = initialValue ? initialValue : arr[0];
+	let res = initialValue ? initialValue : this[0];
 	let startIndex = initialValue ? 0 : 1;
-	for (let i = startIndex; i < arr.length; i++) {
-		res = callback.call(null, res, arr[i], i, this);
+	for (let i = startIndex; i < this.length; i++) {
+		res = callback.call(null, res, this[i], i, this);
 	}
 	return res;
 }
