@@ -1,8 +1,7 @@
 Array.prototype.myMap = function(callback, thisArg) {
-	let arr = Array.prototype.slice.call(this);
 	let newArr = [];
-	for (let i = 0; i < arr.length; i++) {
-		newArr.push(callback.call(thisArg, arr[i], i, this));
+	for (let i = 0; i < this.length; i++) {
+		newArr.push(callback.call(thisArg, this[i], i, this));
 	}
 	return newArr;
 }
