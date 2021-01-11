@@ -4,6 +4,6 @@ function debounce(fn, interval) {
 		if (timer !== null) {
 			clearTimeout(timer);
 		}
-		setTimeout(fn, interval);
+		timer = setTimeout(fn, interval);
 	}
 }
