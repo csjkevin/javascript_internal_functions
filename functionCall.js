@@ -1,4 +1,4 @@
-function myCall(thisArg, ...args) {
+Function.prototype.myCall = function (thisArg, ...args) {
 	if (typeof thisArg === 'undefined' || thisArg === null) {
 		thisArg = window;
 	}

@@ -1,4 +1,4 @@
-function myApply(thisArg, args) {
+Function.prototype.myApply = function (thisArg, args) {
 	if (typeof thisArg === 'undefined' || thisArg === null) {
 		thisArg = window;
 	}
