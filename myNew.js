@@ -1,8 +1,8 @@
-function myNew(obj, ...rest) {
-	const newObj = {};
-	newObj.__proto__ = obj.prototype;
-	const res = obj.call(newObj, ...rest);
-	return typeof res === 'object' ? res : newObj;
+function myNew(constructor, ...rest) {
+  const obj = {};
+  obj.__proto__ = constructor.prototype;
+  const res = constructor.apply(obj, rest);
+  return typeof res === "object" ? res : obj;
 }
 
 function Person(firtName, lastName) {
@@ -14,10 +14,10 @@ Person.prototype.getFullName = function () {
   return `${this.firtName} ${this.lastName}`;
 };
 
-const p1 = new Person('Kevin', 'Chen');
+const p1 = new Person("Kevin", "Chen");
 console.log(p1);
 console.log(p1 instanceof Person);
 
-const p2 = myNew(Person, 'Kevin', 'Chen');
-console.log(p2)
+const p2 = myNew(Person, "Kevin", "Chen");
+console.log(p2);
 console.log(p2 instanceof Person);
