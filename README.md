@@ -1,2 +1,3 @@
-# JavaScript Practice
-My implementation of some JS internal functions that may be asked in the interview.
+# JavaScript Internal Functions
+
+My implementation of some JavaScript internal functions which might be asked in the interview.
